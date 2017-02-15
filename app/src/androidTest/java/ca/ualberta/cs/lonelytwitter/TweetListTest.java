@@ -102,8 +102,13 @@ public class TweetListTest extends ActivityInstrumentationTestCase2 {
         } catch(Exception e) {
             assertTrue(tweets.hasTweet(tweet));
         }
+    }
+    public void testGetCount(){
+        TweetList tweets = new TweetList();
+        Tweet tweet = new NormalTweet("test");
 
+        tweets.add(tweet);
 
-
+        assertEquals("COUNT: ",tweets.getCount(),1);
     }
 }
